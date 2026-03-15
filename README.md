@@ -12,3 +12,24 @@ After dropping all rows containing missing values (df.dropna()), the dataset was
 
 ## 3. Feature Catalog
 The 33 columns in the cleaned dataset fall into five thematic groups: host profile, geographic/location, property characteristics, pricing and booking rules, and guest review scores. The full catalog is presented below.
+| Column Name              | Description                                                                                      |
+|--------------------------|--------------------------------------------------------------------------------------------------|
+| `listing_id`                 | Unique identifier for each Airbnb listing                                                                        |
+| `name`     | Title/description of the listing                                                            |
+| `host_id`          | Unique identifier for the host                                                         |
+| `host_since`         | Date the host joined Airbnb                                                                 |
+| `host_location`        | Graphic location of the host                                                               |
+| `host_response_time`          | How quickly the host responds(e.g., within an hour)                                                                     |
+| `host_response_rate`     | Proportion of inquiries the host responds to                                                 |
+| `host_acceptance_rate`   | Proportion of booking requests accepted                      |
+| `swipe_right_label`      | The preference that the samples swipe right                                                      |
+| `likes_received`         | The likes that the samples received                                                              |
+| `mutual_matches`         | The connection where both users express interest in each other                                   |
+| `profile_pics_count`     | The pictures that the samples add to their profile                                               |
+| `bio_length`             | The word count that the samples have on their profile bio length                                 |
+| `message_sent_count`     | The messages that the samples sent on the dating app                                             |
+| `emoji_usage_rate`       | The rate of emojis used by the samples during the conversation with their match                  |
+| `last_active_hour`       | The timestamp indicating when the user was last online                                           |
+| `swipe_time_of_day`      | The time when the sample usually swipes on the dating app                                        |
+| `match_outcome`          | The outcome of the samples using the dating app to find a partner                                |
+

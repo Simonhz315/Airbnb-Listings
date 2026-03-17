@@ -14,22 +14,35 @@ After dropping all rows containing missing values (df.dropna()), the dataset was
 The 33 columns in the cleaned dataset fall into five thematic groups: host profile, geographic/location, property characteristics, pricing and booking rules, and guest review scores. The full catalog is presented below.
 | Column Name              | Description                                                                                      |
 |--------------------------|--------------------------------------------------------------------------------------------------|
-| `listing_id`                 | Unique identifier for each Airbnb listing                                                                        |
-| `name`     | Title/description of the listing                                                            |
-| `host_id`          | Unique identifier for the host                                                         |
-| `host_since`         | Date the host joined Airbnb                                                                 |
-| `host_location`        | Graphic location of the host                                                               |
-| `host_response_time`          | How quickly the host responds(e.g., within an hour)                                                                     |
+| `listing_id`                 | Unique identifier for each Airbnb listing  |
+| `name`     | Title/description of the listing  |
+| `host_id`          | Unique identifier for the host |
+| `host_since`         | Date the host joined Airbnb |
+| `host_location`        | Graphic location of the host |
+| `host_response_time`          | How quickly the host responds(e.g., within an hour)              |
 | `host_response_rate`     | Proportion of inquiries the host responds to                                                 |
 | `host_acceptance_rate`   | Proportion of booking requests accepted                      |
-| `swipe_right_label`      | The preference that the samples swipe right                                                      |
-| `likes_received`         | The likes that the samples received                                                              |
-| `mutual_matches`         | The connection where both users express interest in each other                                   |
-| `profile_pics_count`     | The pictures that the samples add to their profile                                               |
-| `bio_length`             | The word count that the samples have on their profile bio length                                 |
-| `message_sent_count`     | The messages that the samples sent on the dating app                                             |
-| `emoji_usage_rate`       | The rate of emojis used by the samples during the conversation with their match                  |
-| `last_active_hour`       | The timestamp indicating when the user was last online                                           |
-| `swipe_time_of_day`      | The time when the sample usually swipes on the dating app                                        |
-| `match_outcome`          | The outcome of the samples using the dating app to find a partner                                |
-
+| `host_is_superhost` | Whether the host holds Superhost status (t/f) |
+| `host_total_listings_count` | Number of listings managed by the host |
+| `host_has_profile_pic` | whether the host has uploaded a profile picture (t/f) |
+| `host_identity_verified` | Whether the host's identity has been verified (t/f) |
+| `neighborhood` | Specific neighborhood of the listing |
+| `district` | Borough/district |
+| `city` | City of the listing |
+| `latitude/longitude` | Geographical coordinates of the listing |
+| `property_type` | Type of property (e.g., Entire apartment) |
+| `room_type` | Listing category (Entire place, Private room, etc.) |
+| `accommodates` | Maximum number of guests the listing can host |
+| `bedrooms`| Number of bedrooms |
+| `amenities` | JSON-formatted list of available amenities |
+| `price` | Nightly price in USD |
+| `minimum_nights` | Minimum booking length requried |
+| `maximum_nights` | Maximum booking length allowed |
+| `review_scores_rating` | Overall review rating (0-100) |
+| `review_scores_accuracy` | Accuracy sub-score (0-100) |
+| `review_scores_cleanliness` | Cleanliness sub-score (0-100) |
+| `review_scores_checkin` | Check-in sub-score (0-100) |
+| `review_scores_communication` | Communication sub-score (0-100) |
+| `review_scores_location` | Location sub-score (0-100) |
+| `review_scors_value` | Value sub-score (0-100) |
+| `instant_bookable` | Whether the listing can be booked instantly (t/f) |

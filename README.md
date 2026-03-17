@@ -85,5 +85,5 @@ The notebook as submitted represents the initial data loading and preprocessing 
 6.	Train/test splitting — train_test_split was imported from sklearn but no split was executed.
 These imported but unused libraries strongly suggest the notebook is part of a larger pipeline that will include feature selection (both sequential and exhaustive) and linear regression modeling with price as the likely target variable.
 
-##7. Summary
+## 7. Summary
 The notebook successfully loads and cleans an Airbnb listings dataset for New York City, producing a complete 11,849-row, 33-column dataframe ready for analysis. The preprocessing converts boolean text fields to numeric format and establishes column aliases for downstream use. The imported-but-unused modeling libraries (sklearn’s LinearRegression and train_test_split, mlxtend’s sequential and exhaustive feature selectors) indicate that the next phase of this project will involve feature selection and regression modeling to predict listing prices based on host, property, location, and review attributes.

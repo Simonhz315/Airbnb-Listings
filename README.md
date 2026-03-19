@@ -48,6 +48,7 @@ host_years measures tenure on the platform relative to January 2024. This captur
 
 ## 4. Model Comparison
 Three regression models were trained on an 80/20 train-test split: Linear Regression as a baseline, Random Forest as a bagging ensemble, and Gradient Boosting as a sequential ensemble.
+
 ![image](https://github.com/Simonhz315/Airbnb-Listings/blob/main/R%5E2%20Score.png)
 ![image](https://github.com/Simonhz315/Airbnb-Listings/blob/main/Model%20Comparison%20-%20MAE%20%26%20RMSE.png)
 
@@ -65,11 +66,14 @@ The Gradient Boosting scatter plot of actual versus predicted prices provides th
 Below approximately $200 per night, predictions cluster tightly along the perfect-prediction diagonal. This is where the bulk of NYC Airbnb listings sit — standard apartments and private rooms in Brooklyn, Queens, and non-premium Manhattan neighborhoods. In this range, pricing is relatively "rational" and driven by observable features: bedroom count, location, and basic amenity levels explain most of the variation. The model has abundant training data in this range and the price-setting behavior of hosts is more consistent and market-driven.
 Above $300, scatter increases dramatically and the model systematically underpredicts. This is the premium and luxury segment — high-end Manhattan penthouses, designer lofts in Tribeca, or unique properties like converted artist studios in SoHo. These listings are underrepresented in the training data, and their prices are driven by factors that structured data cannot quantify: architectural character, designer furniture, rooftop access, celebrity-adjacent locations, or simply the host's ability to market exclusivity. The tree-based model's leaf nodes in this price range contain fewer samples, so predictions regress toward the population average — a well-known limitation that reflects the genuine difficulty of pricing unique, premium real estate.
 This pattern is a faithful mirror of how the actual NYC short-term rental market works. The budget-to-midrange segment is commoditized and price-competitive; listings in this band compete primarily on location and capacity, and prices converge around predictable norms. The premium segment is fragmented and taste-driven, where pricing power comes from differentiation rather than standardizable features.
+
 ![image](https://github.com/Simonhz315/Airbnb-Listings/blob/main/Gradient%20Boosting%20-%20Actual%20vs.%20Predicted.png)
 
 ## 6. What Actually Determines Price in NYC
 The Gradient Boosting feature importance chart ranks the 15 strongest predictors and paints a clear picture of the NYC Airbnb pricing hierarchy.
+
 ![image](https://github.com/Simonhz315/Airbnb-Listings/blob/main/Top%2015%20Feature%20Importances%20-%20Gradient%20Boosting.png)
+
 ### Property Size
 accommodates and bedrooms sit at the top, which reflects the most fundamental economic reality of the rental market: larger spaces that host more guests command higher nightly rates. This is true across every borough and every price tier. A 1-bedroom hosting 2 guests and a 3-bedroom hosting 6 guests are in fundamentally different market segments regardless of neighborhood. Guests search and filter by capacity first, making these the primary structural determinants of what a listing can charge.
 ### Location
